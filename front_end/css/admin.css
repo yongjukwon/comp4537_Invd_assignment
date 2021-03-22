@@ -1,0 +1,46 @@
+#backBtn {
+  margin: 10px 0 20px 15px;
+}
+
+
+.displayQuestion {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.displayHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  margin-bottom: 50px;
+}
+
+.optionInputContainer, #buttonsContainer, #submitBtn {
+  margin-top: 20px;
+}
+
+#questionTextArea {
+  margin: 10px 0 20px 0;
+}
+
+.displayOptionContainer {
+  margin-bottom: 20px;
+}
+
+.displayOptionInput {
+  margin-right: 5px;
+}
+
+.displayOptions {
+  margin: 10px 0;
+}
+
+.optionLabel {
+  padding: 0 5px;
+}
+
+#explanation {
+  margin: 20px;
+  margin-top: 50px;
+}

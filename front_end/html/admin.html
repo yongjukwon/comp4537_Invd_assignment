@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <title>Admin</title>
+  <script src="./js/admin.js"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/admin.css" />
+  <body>
+    <div id="backBtn">
+      <button onclick="location.href='./'" type="button">Back</button>
+    </div>
+    <div class="container-fluid" id="root">
+      <div class="row">
+        <div class="col displayQuestion">
+          <h2 class="displayHeader">Questions in DB</h2>
+          <div id="questionsDisplayBlock">
+        </div>
+      </div>
+        <div class="col">
+          <h2>Create a Question</h2>
+          <div class="container" id="questionsContainer">
+            <h5>Question Description:</h5>
+              <textarea 
+                id="questionTextArea" 
+                name="questionDescription" 
+                rows="5" 
+                cols="50" 
+                placeholder="Please describe the question here"></textarea>
+              <h5>Options: </h5>
+              <div id="optionContainer">
+                <div id="option1" class="optionInputContainer">
+                  <input type="radio" name="answer" id="option1Button" value="1">
+                  <label for="option1" class="optionLabel">Option 1.</label>
+                  <input class="optionInput" type="text">
+                </div>
+                <div id="option2" class="optionInputContainer">
+                  <input type="radio" name="answer" id="option2Button" value="2">
+                  <label for="option2" class="optionLabel">Option 2.</label>
+                  <input class="optionInput" type="text" >
+                </div>
+              </div>
+          </div>
+          <div class="container" id="buttonsContainer">
+            <button id="addOption" onclick="handleAnswerInput('add')">Add option</button>
+            <button id="removeOption"  onclick="handleAnswerInput('remove')">Remove option</button>
+            <br />
+            <br />
+            <button type="submit" id="postBtn" onclick="handleOnPost()">Save to DB</button>
+            <button type="submit" id="putBtn" onclick="handleOnPut()">Update</button>
+            <br />
+            <br />
+            <button onclick="location.reload()">Refresh</button>
+          </div>
+          <hr>
+          <div id="explanation">
+            <h5>✅ Create a question</h5>
+            - Write question description in the text area. <br />
+            - Write answer options.<br />
+            - If you need more input options, hit 'Add option'<br />
+            - If you want to remove input options, hit 'Remove option'<br />
+            - Options' minimum is 2 and maximum is 4.<br />
+            - Choose correct answer by checking radio button at the left of each option
+            <br><br>
+            <h5> ✅ Update a question</h5>
+            - Hit 'Move Data to the form to update' button on the question to update<br />
+            - 'Save to DB' button will be disabled<br />
+            - If you want go back to create a question, hit 'Refresh' button<br />
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
