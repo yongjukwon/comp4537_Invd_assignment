@@ -1,0 +1,51 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+
+.r1 {
+    color: red;
+}
+
+.r2 {
+    color: blue;
+}
+
+.view {
+    border-bottom: 1px solid black;
+    cursor: default;
+}
+
+
+.view:hover {
+    background-color: lightgrey;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.answers {
+    padding-top: 1em;
+}
+
+.options {
+    padding-bottom: 1em;
+}
+
+
+.questionWrapper {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+
+h6{
+    color: maroon;
+}
